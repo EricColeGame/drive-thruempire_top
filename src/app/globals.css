@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 12%;
+    --primary: 18 65% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 95%;
+    --secondary-foreground: 0 0% 20%;
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 0 0% 93%;
+    --accent-foreground: 0 0% 12%;
+    --destructive: 8 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 18 65% 42%;
+    --radius: 0.75rem;
+    --nav-theme: 18 65% 42%;
+    --nav-theme-light: 18 65% 55%;
+    --chart-1: 18 65% 42%;
+    --chart-2: 175 32% 42%;
+    --chart-3: 221 30% 42%;
+    --chart-4: 38 62% 42%;
+    --chart-5: 0 0% 45%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 88%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 88%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 88%;
+    --primary: 0 0% 92%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 88%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 56%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 92%;
+    --destructive: 8 70% 45%;
+    --destructive-foreground: 0 0% 96%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 18 65% 45%;
+    --nav-theme: 18 65% 40%;
+    --nav-theme-light: 18 65% 55%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground; }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 18% 12%, hsl(var(--nav-theme) / 0.12), transparent 32rem),
+      radial-gradient(circle at 85% 8%, hsl(175 32% 47% / 0.08), transparent 28rem);
+    z-index: -1;
+  }
+}
+
+@layer utilities {
+  .prose-invert { color: hsl(var(--muted-foreground)); }
+}
+
+/* Trending Now auto-scroll carousel */
+@keyframes auto-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-auto-scroll {
+  animation: auto-scroll 40s linear infinite;
+}
+
+.animate-auto-scroll:hover {
+  animation-play-state: paused;
+}

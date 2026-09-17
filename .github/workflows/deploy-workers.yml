@@ -1,0 +1,57 @@
+name: Build and Deploy to Cloudflare Workers
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    # Never deploy from the public mirror (EricColeGame/vvultimatum_cloudflare);
+    # template copies under other owners deploy normally with their own secrets.
+    if: github.repository != 'EricColeGame/vvultimatum_cloudflare'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL }}
+          NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
+          NEXT_PUBLIC_MICROSOFT_CLARITY_ID: ${{ secrets.NEXT_PUBLIC_MICROSOFT_CLARITY_ID }}
+          NEXT_PUBLIC_GOOGLE_ADSENSE_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ADSENSE_ID }}
+          NEXT_PUBLIC_AD_SOCIAL_BAR: ${{ secrets.NEXT_PUBLIC_AD_SOCIAL_BAR }}
+          NEXT_PUBLIC_AD_NATIVE_BANNER: ${{ secrets.NEXT_PUBLIC_AD_NATIVE_BANNER }}
+          NEXT_PUBLIC_AD_BANNER_728X90: ${{ secrets.NEXT_PUBLIC_AD_BANNER_728X90 }}
+          NEXT_PUBLIC_AD_BANNER_300X250: ${{ secrets.NEXT_PUBLIC_AD_BANNER_300X250 }}
+          NEXT_PUBLIC_AD_BANNER_468X60: ${{ secrets.NEXT_PUBLIC_AD_BANNER_468X60 }}
+          NEXT_PUBLIC_AD_SIDEBAR_160X600: ${{ secrets.NEXT_PUBLIC_AD_SIDEBAR_160X600 }}
+          NEXT_PUBLIC_AD_SIDEBAR_160X300: ${{ secrets.NEXT_PUBLIC_AD_SIDEBAR_160X300 }}
+          NEXT_PUBLIC_AD_MOBILE_320X50: ${{ secrets.NEXT_PUBLIC_AD_MOBILE_320X50 }}
+          NEXT_PUBLIC_ADSTERRA_NATIVE_HOST: ${{ secrets.NEXT_PUBLIC_ADSTERRA_NATIVE_HOST }}
+
+      - name: Serve default locale at site root
+        run: |
+          if [ -f out/en/index.html ]; then cp -f out/en/index.html out/index.html
+          elif [ -f out/en.html ]; then cp -f out/en.html out/index.html
+          else echo "en homepage export not found"; find out -maxdepth 2 -name '*.html' | head -20; exit 1; fi
+
+      - name: Deploy to Cloudflare Workers
+        run: npx wrangler@latest deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
