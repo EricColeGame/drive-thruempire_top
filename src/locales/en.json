@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Drive-Thru Empire Wiki",
+    "name": "drive-thruempire",
     "shortName": "Drive-Thru Empire",
     "tagline": "Roblox Codes, Cars, Upgrades & Complete Guides",
     "description": "Explore the Drive-Thru Empire Wiki for Roblox codes, cars, upgrades, earning tips, beginner guides, gameplay mechanics, and the latest game information.",
@@ -39,22 +39,22 @@
         {
           "number": "1",
           "title": "Beginner Guide",
-          "description": "Master the Spirit World from day one with our comprehensive beginner guide covering controls, combat, and early progression."
+          "description": "Master the core Build, Roll, and Earn game loop from day one, taking your first drive-thru orders and learning basic restaurant controls."
         },
         {
           "number": "2",
-          "title": "Fastest Leveling",
-          "description": "Dominate early game and max your progression with the most efficient leveling routes and strategies."
+          "title": "Fast Money Guide",
+          "description": "Accelerate your cash flow quickly by optimizing customer serving speed and reinvesting earnings into essential kitchen upgrades."
         },
         {
           "number": "3",
-          "title": "Best Farming Spots",
-          "description": "Maximize your Soul Essence and EXP gains with optimal farming locations for every stage."
+          "title": "Car Collection & Rolling",
+          "description": "Learn how to roll for rare exotic vehicles and supercars that bring high-value customers and huge income multipliers to your business."
         },
         {
           "number": "4",
-          "title": "How to Extract",
-          "description": "Learn the best methods and locations for extracting resources in Drive-Thru Empire."
+          "title": "All Codes & Rewards",
+          "description": "Redeem active working promo codes to claim free bonus cash, exclusive vehicle rerolls, and valuable early progression boosts."
         }
       ]
     },
@@ -127,13 +127,13 @@
     "aboutGame": {
       "title": "What is Drive-Thru Empire?",
       "paragraphs": [
-        "Drive-Thru Empire is a stylized fighting RPG on Roblox inspired by the Bleach anime universe. Choose from three playable races Shinigami, Quincy, or Hollow each with unique progression systems, unlockable abilities, and evolution paths. Master over 130 skills as you fight your way to the level 100 cap.",
-        "Whether you're unlocking your first Shikai, evolving from a base Hollow into an Arrancar, or grinding Quincy Lieutenant missions, our wiki covers every system with detailed guides, data tables, and step-by-step walkthroughs."
+        "Drive-Thru Empire is an engaging fast-food restaurant simulation and car-collecting tycoon experience on Roblox developed by DRAIN CCU Games. Players build and expand their very own drive-thru empire, taking customer orders, serving quality meals, and rolling for prestigious supercars to dramatically scale their cash profits.",
+        "From a modest single-lane roadside diner to a sprawling culinary mega-franchise with automated cooking stations and exotic luxury vehicles, our wiki provides complete guides, upgrade paths, and optimal earning strategies to help you dominate the business leaderboard."
       ],
       "stats": [
         {
           "label": "Developer",
-          "value": "Midnight Continent"
+          "value": "DRAIN CCU Games"
         },
         {
           "label": "Platform",
@@ -141,158 +141,248 @@
         },
         {
           "label": "Genre",
-          "value": "Fighting RPG"
+          "value": "Tycoon Simulator"
         },
         {
-          "label": "Visits",
-          "value": "12.6M+"
+          "label": "Core Loop",
+          "value": "Build • Roll • Earn"
         },
         {
-          "label": "Favorites",
-          "value": "243K+"
-        },
-        {
-          "label": "Total Skills",
-          "value": "130+"
-        },
-        {
-          "label": "Level Cap",
-          "value": "100"
+          "label": "Update Frequency",
+          "value": "Weekly"
         }
       ],
       "cta": "Explore All Guides"
     },
     "explore": {
       "title": "Explore Drive-Thru Empire Wiki",
-      "description": "Master your seafood restaurant on Roblox with essential progression guides, active codes, complete fish & recipe catalogs, and optimal upgrade strategies.",
+      "description": "Master your drive-thru empire on Roblox with comprehensive progression guides, active codes, vehicle catalogs, upgrade priorities, and earning strategies.",
       "modules": [
         {
           "order": 1,
-          "name": "Drive-Thru Empire Working Codes",
-          "description": "Redeem the latest working codes to claim free coins, gems, exclusive cosmetics, and boost items before they expire.",
-          "href": "/codes/my-seafood-stand-codes",
-          "displayType": "code-box",
+          "name": "drive-thruempire Codes",
+          "description": "Check active Drive-Thru Empire working codes, reward tiers, and instant redemption instructions to claim free in-game cash and boosts.",
+          "href": "/codes/drive-thru-empire-codes",
+          "displayType": "code-cards",
           "highlights": [
             {
-              "label": "Code",
-              "detail": "FULLRELEASE — Free Cash & Rewards"
+              "label": "RELEASE",
+              "detail": "Free starter cash & initial boost",
+              "badge": "Active"
             },
             {
-              "label": "Code",
-              "detail": "75KLIKES — Exclusive Ability Reroll"
+              "label": "EMPIRE",
+              "detail": "Bonus cash reward for restaurant expansion",
+              "badge": "Active"
             },
             {
-              "label": "Tip",
-              "detail": "Codes are case-sensitive; enter them in the Settings menu"
+              "label": "CARROLL",
+              "detail": "Free supercar reroll ticket",
+              "badge": "New"
+            },
+            {
+              "label": "5KLIKES",
+              "detail": "Exclusive customer bonus reward",
+              "badge": "Active"
             }
           ]
         },
         {
           "order": 2,
-          "name": "Beginner Guide: How to Start & Serve Customers",
-          "description": "Step-by-step beginner guide covering customer ordering, food prep, station management, and cashier checkout mechanics.",
-          "href": "/guide/my-seafood-stand-beginner-guide",
-          "displayType": "feature-cards",
+          "name": "drive-thruempire Beginner Guide",
+          "description": "Follow our step-by-step beginner tutorial to build your first drive-thru lane, take orders, cook food, and earn reliable starting profits.",
+          "href": "/guide/drive-thru-empire-beginner-guide",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "Step 1",
-              "detail": "Take customer order at the stall front"
+              "label": "1",
+              "detail": "Construct your initial order intercom and pickup window"
             },
             {
-              "label": "Step 2",
-              "detail": "Cook seafood on the grill or boil station"
+              "label": "2",
+              "detail": "Take incoming vehicle customer orders at the counter"
             },
             {
-              "label": "Step 3",
-              "detail": "Serve warm food promptly for maximum customer tips"
+              "label": "3",
+              "detail": "Prepare burgers and drinks at cooking stations quickly"
+            },
+            {
+              "label": "4",
+              "detail": "Serve hot orders promptly to collect cash and tips"
+            },
+            {
+              "label": "5",
+              "detail": "Roll your first vehicle to unlock higher customer tiers"
+            },
+            {
+              "label": "6",
+              "detail": "Reinvest early profits into kitchen speed and conveyor upgrades"
             }
           ]
         },
         {
           "order": 3,
-          "name": "Seafood & Fish Tier List",
-          "description": "Complete breakdown of all catchable fish and seafood ranked by market value, customer demand, and profit margins.",
-          "href": "/seafood/my-seafood-stand-tier-list",
+          "name": "drive-thruempire Car Rarities",
+          "description": "Explore the full vehicle tier list from common daily drivers to legendary hypercars that draw VIP patrons and massive income.",
+          "href": "/guide/drive-thru-empire-car-tier-list",
           "displayType": "tier-grid",
           "highlights": [
             {
-              "label": "S Tier",
-              "detail": "King Crab · Lobster Boil — Highest profit per customer"
+              "label": "S",
+              "detail": "Exotic Hypercars & Prototypes — 10x+ cash multipliers and elite VIP guests"
             },
             {
-              "label": "A Tier",
-              "detail": "Salmon · Jumbo Shrimp · Tuna Steak — Reliable fast earners"
+              "label": "A",
+              "detail": "Supercars & Grand Tourers — 5x cash bonuses and rapid customer turnover"
             },
             {
-              "label": "B Tier",
-              "detail": "Clams · Oysters · Squid — Great mid-game margin"
+              "label": "B",
+              "detail": "Sports Coupes & Muscle Cars — 2.5x earnings with solid mid-game scaling"
             },
             {
-              "label": "C Tier",
-              "detail": "Common Sardines · Small Crab — Starter seafood"
+              "label": "C",
+              "detail": "Sedans & Compact Hatchbacks — Reliable starter vehicles for early revenue"
             }
           ]
         },
         {
           "order": 4,
-          "name": "Best Upgrades Progression",
-          "description": "Optimal order to spend your cash: expand kitchen stations, hire waitstaff, speed up grills, and upgrade seating.",
-          "href": "/upgrades/my-seafood-stand-best-upgrades",
-          "displayType": "feature-cards",
+          "name": "drive-thruempire Restaurant Upgrades",
+          "description": "Discover optimal upgrade paths for food preparation speed, automated order conveyors, additional lanes, and aesthetic dining expansions.",
+          "href": "/guide/drive-thru-empire-best-upgrades",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Priority 1",
-              "detail": "Cooking Speed & Extra Burners — Clears customer backlog"
+              "label": "Grills",
+              "detail": "High-capacity burger griddles that double patty cooking speed"
             },
             {
-              "label": "Priority 2",
-              "detail": "Customer Seating Capacity — Increases simultaneous diners"
+              "label": "Fryers",
+              "detail": "Automated deep fryers for golden fries with zero burnt waste"
             },
             {
-              "label": "Priority 3",
-              "detail": "Auto-Chef / Waiter Staff — Passive hands-free revenue"
+              "label": "Drinks",
+              "detail": "Multi-dispenser fountain stations for instant soda pouring"
+            },
+            {
+              "label": "Conveyor",
+              "detail": "Motorized assembly belts transporting meals straight to pickup"
+            },
+            {
+              "label": "Staff",
+              "detail": "Automated line cooks and cashiers that handle orders passively"
+            },
+            {
+              "label": "Driveway",
+              "detail": "Dual-lane expansion allowing simultaneous vehicle servicing"
             }
           ]
         },
         {
           "order": 5,
-          "name": "How to Get Cash Fast",
-          "description": "Top money-making strategies, VIP evaluation, tip maximization, and high-efficiency serving tips.",
-          "href": "/guide/my-seafood-stand-how-to-get-cash-fast",
-          "displayType": "feature-cards",
+          "name": "drive-thruempire Fast Money Guide",
+          "description": "Maximize your hourly cash earnings with proven strategies for serving combos, stacking bonuses, and leveraging high-tier car collections.",
+          "href": "/guide/drive-thru-empire-fast-money-guide",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "Combo",
-              "detail": "Chain orders quickly to build the Customer Happiness multiplier"
+              "label": "1",
+              "detail": "Maintain zero-wait order queues to trigger customer tip streaks"
             },
             {
-              "label": "High Margin",
-              "detail": "Focus high-tier seafood boils during peak customer rush hours"
+              "label": "2",
+              "detail": "Equip highest rarity vehicles to attract affluent supercar customers"
             },
             {
-              "label": "Reinvest",
-              "detail": "Keep 20% cash reserve for fresh ingredient replenishment"
+              "label": "3",
+              "detail": "Prioritize beverage and side dish add-on upgrades for extra profit"
+            },
+            {
+              "label": "4",
+              "detail": "Activate working promo codes for instant cash injection boosts"
             }
           ]
         },
         {
           "order": 6,
-          "name": "Plot Expansion & Stand Customization",
-          "description": "Unlock bigger land plots, arrange optimal cooking layouts, and add high-value decorative upgrades.",
-          "href": "/upgrades/my-seafood-stand-how-to-upgrade-plot",
-          "displayType": "feature-cards",
+          "name": "drive-thruempire Supercar Collection",
+          "description": "Discover every collectible vehicle in Drive-Thru Empire, including drop rates, special customer traits, and income perks.",
+          "href": "/guide/drive-thru-empire-cars",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Plot 1",
-              "detail": "Starter Beach Stand (3 Tables, 1 Grill)"
+              "label": "Hypercar",
+              "detail": "Top-tier luxury models that yield the highest customer tips"
             },
             {
-              "label": "Plot 2",
-              "detail": "Boardwalk Restaurant (6 Tables, 2 Grills, Boil Station)"
+              "label": "Supercar",
+              "detail": "High-speed performance vehicles bringing rapid customer spawns"
             },
             {
-              "label": "Plot 3",
-              "detail": "Luxury Pier Seafood Pavilion (Full Automation & VIP Seating)"
+              "label": "Classic",
+              "detail": "Vintage collector automobiles with steady loyalty bonus rates"
+            },
+            {
+              "label": "Roadster",
+              "detail": "Sleek open-top cars that boost overall diner satisfaction"
+            },
+            {
+              "label": "SUV",
+              "detail": "High-volume family vehicles ordering large multi-item combos"
+            },
+            {
+              "label": "Cruiser",
+              "detail": "Popular daily vehicles providing steady baseline income"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "name": "drive-thruempire Updates & Patch Notes",
+          "description": "Stay informed with the latest version updates, balance adjustments, new vehicle rolls, and feature releases from DRAIN CCU Games.",
+          "href": "/guide/drive-thru-empire-updates",
+          "displayType": "step-by-step",
+          "highlights": [
+            {
+              "label": "1",
+              "detail": "New Supercar Roll Pool featuring limited-edition exotic racers"
+            },
+            {
+              "label": "2",
+              "detail": "Kitchen Automation expansion with upgraded conveyor belts"
+            },
+            {
+              "label": "3",
+              "detail": "Quality of life balance adjustments to customer queue patience"
+            },
+            {
+              "label": "4",
+              "detail": "Fresh promo codes added for celebratory community milestones"
+            }
+          ]
+        },
+        {
+          "order": 8,
+          "name": "drive-thruempire Community Hub",
+          "description": "Connect with other restaurant owners, share optimal kitchen layouts, discover trade opportunities, and follow developer announcements.",
+          "href": "/guide/drive-thru-empire-community",
+          "displayType": "card-list",
+          "highlights": [
+            {
+              "label": "Roblox",
+              "detail": "Official DRAIN CCU Games Roblox group for news and member perks"
+            },
+            {
+              "label": "Discord",
+              "detail": "Community server for code drops, sneaks, and player discussions"
+            },
+            {
+              "label": "Guides",
+              "detail": "Community-curated tycoon tips and vehicle roll rate breakdowns"
+            },
+            {
+              "label": "Feedback",
+              "detail": "Direct channel to suggest features and report gameplay bugs"
             }
           ]
         }
@@ -300,27 +390,27 @@
     },
     "faq": {
       "title": "Frequently Asked Questions",
-      "description": "Quick answers to the most common questions about Drive-Thru Empire.",
+      "description": "Quick answers to the most common questions about Drive-Thru Empire on Roblox.",
       "items": [
         {
-          "question": "What is Drive-Thru Empire?",
-          "answer": "Drive-Thru Empire is a free-to-play fighting RPG on Roblox based on the Bleach anime. You choose one of game mechanics Shinigami (Soul Reaper), Quincy, or Hollow each with unique progression, combat abilities, and evolution systems. The game features 130+ skills, a level 100 cap, boss fights, and deep build customization."
+          "question": "What is Drive-Thru Empire on Roblox?",
+          "answer": "Drive-Thru Empire is a popular fast-food restaurant simulation and car-collecting tycoon on Roblox developed by DRAIN CCU Games. Players build and manage their own drive-thru restaurants, roll for rare supercars, serve hungry customers, and scale their profits through kitchen automation."
         },
         {
-          "question": "Which race should beginners pick?",
-          "answer": "Shinigami is the most straightforward starter race, while Hollow and Quincy offer more specialized progression routes. Compare their abilities before committing."
+          "question": "How do I redeem codes in Drive-Thru Empire?",
+          "answer": "To redeem codes in Drive-Thru Empire, open the game on Roblox, locate and click the Codes or Settings button on your screen, enter any active promo code exactly as written, and click Redeem to receive free cash and bonus rewards."
         },
         {
-          "question": "What is the current level cap?",
-          "answer": "The current level cap is 100, with more than 130 skills available across trees and race progression systems."
+          "question": "How do cars work in Drive-Thru Empire?",
+          "answer": "In Drive-Thru Empire, collecting and rolling for rare vehicles is essential. High-tier cars like supercars and hypercars bring VIP customers to your drive-thru window, awarding significantly larger cash tips and passive revenue multipliers compared to starter vehicles."
         },
         {
-          "question": "Where do I find active codes?",
-          "answer": "Use the Codes page for working codes, rewards, expiration notes, and redeem instructions."
+          "question": "What are the best upgrades to buy first in Drive-Thru Empire?",
+          "answer": "Beginners in Drive-Thru Empire should first invest in cooking speed and automated kitchen stations (such as griddles and fryers) to eliminate customer backlogs, followed by driveway expansion and car rolls to maximize per-order profits."
         },
         {
-          "question": "Are boss guides updated?",
-          "answer": "Boss pages are organized with spawn notes, attack patterns, strategies, drop tables, and related next steps for progression."
+          "question": "How often does Drive-Thru Empire receive updates?",
+          "answer": "The developers at DRAIN CCU Games actively maintain Drive-Thru Empire with regular weekly patches, introducing new collectible supercars, fresh promotional codes, expanded kitchen equipment, and community-requested gameplay improvements."
         }
       ]
     },
