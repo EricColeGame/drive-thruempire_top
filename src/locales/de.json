@@ -1,9 +1,9 @@
 {
   "site": {
-    "name": "My Seafood Stand Wiki",
-    "shortName": "My Seafood Stand",
+    "name": "Drive-Thru Empire Wiki",
+    "shortName": "Drive-Thru Empire",
     "tagline": "Vollständige Guides, Codes, Rezepte & Tier-Listen",
-    "description": "Dein ultimativer Guide für My Seafood Stand auf Roblox! Entdecke aktive Codes, Meeresfrüchte-Rezepte, die besten Upgrades, Gewinnstrategien und Fortschritts-Guides.",
+    "description": "Dein ultimativer Guide für Drive-Thru Empire auf Roblox! Entdecke aktive Codes, Meeresfrüchte-Rezepte, die besten Upgrades, Gewinnstrategien und Fortschritts-Guides.",
     "legalNotice": "Inoffizielles Fan-Wiki. Von Spielern für Spieler gemacht."
   },
   "nav": {
@@ -26,13 +26,13 @@
   },
   "home": {
     "meta": {
-      "title": "My Seafood Stand Wiki — Codes, Rezepte, Upgrades & Guides",
-      "description": "Vollständiger My Seafood Stand Guide auf Roblox mit aktiven funktionierenden Codes, allen Fischen & Rezepten, Tier-Liste der besten Upgrades und Tipps für schnelles Geld."
+      "title": "Drive-Thru Empire Wiki — Codes, Rezepte, Upgrades & Guides",
+      "description": "Vollständiger Drive-Thru Empire Guide auf Roblox mit aktiven funktionierenden Codes, allen Fischen & Rezepten, Tier-Liste der besten Upgrades und Tipps für schnelles Geld."
     },
     "hero": {
       "eyebrow": "Von Fans erstelltes Community-Wiki",
-      "title": "My Seafood Stand",
-      "description": "Meistere dein Restaurant in My Seafood Stand auf Roblox. Erhalte Zugriff auf alle aktiven Codes, den kompletten Fisch- & Rezeptkatalog, optimale Upgrades und Profi-Strategien zum Geldverdienen.",
+      "title": "Drive-Thru Empire",
+      "description": "Meistere dein Restaurant in Drive-Thru Empire auf Roblox. Erhalte Zugriff auf alle aktiven Codes, den kompletten Fisch- & Rezeptkatalog, optimale Upgrades und Profi-Strategien zum Geldverdienen.",
       "stats": [
         "Alle Codes",
         "Alle Fische & Rezepte",
@@ -51,7 +51,7 @@
     },
     "start": {
       "eyebrow": "Hier starten",
-      "title": "Deine Reise in My Seafood Stand",
+      "title": "Deine Reise in Drive-Thru Empire",
       "cards": [
         {
           "number": "1",
@@ -71,7 +71,7 @@
         {
           "number": "4",
           "title": "So extrahierst du",
-          "description": "Lerne die besten Methoden und Orte zum Extrahieren von Ressourcen in My Seafood Stand."
+          "description": "Lerne die besten Methoden und Orte zum Extrahieren von Ressourcen in Drive-Thru Empire."
         }
       ]
     },
@@ -142,9 +142,9 @@
       ]
     },
     "aboutGame": {
-      "title": "Was ist My Seafood Stand?",
+      "title": "Was ist Drive-Thru Empire?",
       "paragraphs": [
-        "My Seafood Stand ist ein stilisiertes Kampf-RPG auf Roblox, inspiriert vom Bleach-Anime-Universum. Wähle aus drei spielbaren Rassen – Shinigami, Quincy oder Hollow – jede mit einzigartigen Fortschrittssystemen, freischaltbaren Fähigkeiten und Entwicklungspfaden. Meistere über 130 Fähigkeiten, während du dich bis zur Höchststufe 100 vorkämpfst.",
+        "Drive-Thru Empire ist ein stilisiertes Kampf-RPG auf Roblox, inspiriert vom Bleach-Anime-Universum. Wähle aus drei spielbaren Rassen – Shinigami, Quincy oder Hollow – jede mit einzigartigen Fortschrittssystemen, freischaltbaren Fähigkeiten und Entwicklungspfaden. Meistere über 130 Fähigkeiten, während du dich bis zur Höchststufe 100 vorkämpfst.",
         "Egal, ob du dein erstes Shikai freischaltest, dich von einem Basis-Hollow zu einem Arrancar entwickelst oder Quincy-Lieutenant-Missionen grindest: Unser Wiki deckt jedes System mit detaillierten Guides, Datentabellen und Schritt-für-Schritt-Anleitungen ab."
       ],
       "stats": [
@@ -180,12 +180,12 @@
       "cta": "Alle Guides erkunden"
     },
     "explore": {
-      "title": "My Seafood Stand Wiki erkunden",
+      "title": "Drive-Thru Empire Wiki erkunden",
       "description": "Meistere dein Meeresfrüchte-Restaurant auf Roblox mit unverzichtbaren Fortschritts-Guides, aktiven Codes, vollständigen Fisch- & Rezeptkatalogen und optimalen Upgrade-Strategien.",
       "modules": [
         {
           "order": 1,
-          "name": "Funktionierende Codes für My Seafood Stand",
+          "name": "Funktionierende Codes für Drive-Thru Empire",
           "description": "Löse die neuesten funktionierenden Codes ein, um dir kostenlose Münzen, Edelsteine, exklusive Kosmetika und Boost-Items zu sichern, bevor sie ablaufen.",
           "href": "/codes/my-seafood-stand-codes",
           "displayType": "code-box",
@@ -317,11 +317,11 @@
     },
     "faq": {
       "title": "Häufig gestellte Fragen (FAQ)",
-      "description": "Schnelle Antworten auf die häufigsten Fragen zu My Seafood Stand.",
+      "description": "Schnelle Antworten auf die häufigsten Fragen zu Drive-Thru Empire.",
       "items": [
         {
-          "question": "Was ist My Seafood Stand?",
-          "answer": "My Seafood Stand ist ein Free-to-Play-Kampf-RPG auf Roblox, das auf dem Anime Bleach basiert. Du wählst eine der Spielmechaniken Shinigami (Soul Reaper), Quincy oder Hollow – jede mit eigenem Fortschritt, Kampffähigkeiten und Evolutionssystemen. Das Spiel bietet über 130 Fähigkeiten, eine Maximalstufe von 100, Bosskämpfe und umfassende Build-Anpassungen."
+          "question": "Was ist Drive-Thru Empire?",
+          "answer": "Drive-Thru Empire ist ein Free-to-Play-Kampf-RPG auf Roblox, das auf dem Anime Bleach basiert. Du wählst eine der Spielmechaniken Shinigami (Soul Reaper), Quincy oder Hollow – jede mit eigenem Fortschritt, Kampffähigkeiten und Evolutionssystemen. Das Spiel bietet über 130 Fähigkeiten, eine Maximalstufe von 100, Bosskämpfe und umfassende Build-Anpassungen."
         },
         {
           "question": "Welche Rasse sollten Anfänger wählen?",
@@ -342,7 +342,7 @@
       ]
     },
     "finalCta": {
-      "title": "Bereit, My Seafood Stand zu meistern?",
+      "title": "Bereit, Drive-Thru Empire zu meistern?",
       "description": "Von deinen ersten Schritten in Fort Adams bis zu den Endgame-Bosskämpfen – unser Community-Wiki begleitet dich mit kostenlosen, aktuellen Guides.",
       "primary": "Anfänger-Guide lesen",
       "secondary": "Auf Roblox spielen"
@@ -350,12 +350,12 @@
   },
   "bosses": {
     "meta": {
-      "title": "Bosse — Vollständiger Guide & Komplettlösung | My Seafood Stand Wiki",
-      "description": "Vollständige Boss-Guides für My Seafood Stand — alle Bosse vom Tutorial-Ritter Gelum bis zu Endgame-Begegnungen mit Strategien, Drops und Respawn-Timern."
+      "title": "Bosse — Vollständiger Guide & Komplettlösung | Drive-Thru Empire Wiki",
+      "description": "Vollständige Boss-Guides für Drive-Thru Empire — alle Bosse vom Tutorial-Ritter Gelum bis zu Endgame-Begegnungen mit Strategien, Drops und Respawn-Timern."
     },
     "overviewTitle": "Boss-Übersicht",
-    "overviewDescription": "Vollständige Guides für jede Boss-Begegnung in My Seafood Stand – 13 Bosse vom Tutorial-Ritter Gelum bis zu Endgame-Kämpfen wie dem Gelid Dweller und den Gauntlet-Herausforderungen.",
-    "body": "Bosse in My Seafood Stand dienen als Fähigkeitstests und Meilensteine deines Fortschritts. Manche, wie Gelum, bringen dir während des Tutorials die Grundlagen des Kampfsystems bei. Andere, wie der Shikai-Geist und der Resurreccion-Geist, sind Begegnungen in der inneren Welt, die direkt an die Kraft-Freischaltung deiner Rasse gekoppelt sind. Gebietsbosse wie Dragonfly, King Croc und Securis bewachen den Zugang zu neuen Zonen und Belohnungen. Zu den jüngsten Neuzugängen gehören der Rogue Commander mit seinen Minions, der eisige The Everfrosted sowie vier brandneue Endgame-Bosse: The Gelid Dweller, Cinder of the Broken Sky, Devourer of Hosts und der Wandering Swordsman (Junichiro). Jeder Boss verfügt über eigene Angriffsmuster und telegrafierte Angriffe, die du verinnerlichen musst. Nutze die folgenden Guides, um dich optimal auf jeden Kampf vorzubereiten.",
+    "overviewDescription": "Vollständige Guides für jede Boss-Begegnung in Drive-Thru Empire – 13 Bosse vom Tutorial-Ritter Gelum bis zu Endgame-Kämpfen wie dem Gelid Dweller und den Gauntlet-Herausforderungen.",
+    "body": "Bosse in Drive-Thru Empire dienen als Fähigkeitstests und Meilensteine deines Fortschritts. Manche, wie Gelum, bringen dir während des Tutorials die Grundlagen des Kampfsystems bei. Andere, wie der Shikai-Geist und der Resurreccion-Geist, sind Begegnungen in der inneren Welt, die direkt an die Kraft-Freischaltung deiner Rasse gekoppelt sind. Gebietsbosse wie Dragonfly, King Croc und Securis bewachen den Zugang zu neuen Zonen und Belohnungen. Zu den jüngsten Neuzugängen gehören der Rogue Commander mit seinen Minions, der eisige The Everfrosted sowie vier brandneue Endgame-Bosse: The Gelid Dweller, Cinder of the Broken Sky, Devourer of Hosts und der Wandering Swordsman (Junichiro). Jeder Boss verfügt über eigene Angriffsmuster und telegrafierte Angriffe, die du verinnerlichen musst. Nutze die folgenden Guides, um dich optimal auf jeden Kampf vorzubereiten.",
     "guidesTitle": "Boss-Guides",
     "readMore": "Mehr lesen",
     "new": "Neu",
@@ -379,14 +379,14 @@
     "noGuidesAvailable": "Noch keine Guides verfügbar. Schau bald wieder vorbei!"
   },
   "footer": {
-    "aboutTitle": "My Seafood Stand Wiki",
-    "about": "My Seafood Stand Wiki ist ein unabhängiger, von Fans erstellter Guide-Hub, der Fortschrittsrouten, Rassen, Bosse, Builds und essenzielles Spielwissen für neue und erfahrene Spieler gleichermaßen abdeckt.",
+    "aboutTitle": "Drive-Thru Empire Wiki",
+    "about": "Drive-Thru Empire Wiki ist ein unabhängiger, von Fans erstellter Guide-Hub, der Fortschrittsrouten, Rassen, Bosse, Builds und essenzielles Spielwissen für neue und erfahrene Spieler gleichermaßen abdeckt.",
     "quickLinks": "Schnelllinks",
     "guides": "Guides",
     "legal": "Rechtliches",
-    "copyright": "2026 My Seafood Stand Wiki. Nicht verbunden mit Midnight Continent oder Roblox.",
+    "copyright": "2026 Drive-Thru Empire Wiki. Nicht verbunden mit Midnight Continent oder Roblox.",
     "description": "Kostenloses, von Bleach inspiriertes Kampf-RPG auf Roblox. 3 Rassen, 130+ Fähigkeiten, Lv100-Cap.",
-    "playGame": "My Seafood Stand spielen",
+    "playGame": "Drive-Thru Empire spielen",
     "officialDiscord": "Offizieller Discord",
     "officialYoutube": "Offizieller YouTube-Kanal",
     "vvBuilder": "VV Builder (Skill-Planer)",

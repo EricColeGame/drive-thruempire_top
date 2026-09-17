@@ -19,15 +19,15 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "My Seafood Stand Wiki",
-  shortName: "My Seafood Stand",
-  logoText: "SS",
-  tagline: "Complete Guides, Codes, Recipes & Tier Lists",
-  description: "Your ultimate guide to My Seafood Stand on Roblox! Explore active working codes, seafood recipes, best upgrades, profit strategies, and progression guides.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://myseafoodstand.top",
-  supportEmail: `support@${new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://myseafoodstand.top").hostname.replace(/^www\./, "")}`,
-  gameUrl: "https://www.roblox.com/games/my-seafood-stand",
-  heroVideoId: "-pWg6hLqsao", // Roblox My Seafood Stand codes & gameplay video
+  name: "Drive-Thru Empire Wiki",
+  shortName: "Drive-Thru Empire",
+  logoText: "DE",
+  tagline: "Roblox Codes, Cars, Upgrades & Complete Guides",
+  description: "Explore the Drive-Thru Empire Wiki for Roblox codes, cars, upgrades, earning tips, beginner guides, gameplay mechanics, and the latest game information.",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://drive-thruempire.top",
+  supportEmail: "support@drive-thruempire.top",
+  gameUrl: "https://www.roblox.com/games/88271351034688/Drive-Thru-Empire",
+  heroVideoId: "-pWg6hLqsao",
   social: {
     discord: "https://discord.gg/roblox",
     youtube: "https://www.youtube.com/@roblox",
