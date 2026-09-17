@@ -1,1 +1,315 @@
-{}
+{
+  "site": {
+    "name": "drive-thruempire Wiki",
+    "shortName": "Drive-Thru Empire",
+    "tagline": "Guía definitiva, códigos y estrategias para Drive-Thru Empire",
+    "description": "Tu recurso completo para Drive-Thru Empire en Roblox. Códigos actualizados, guías de cocina, superdeportivos y optimización de drive-thru.",
+    "legalNotice": "drive-thruempire Wiki es un recurso no oficial creado por fans. No está afiliado ni respaldado por Roblox Corporation ni DRAIN CCU Games."
+  },
+  "nav": {
+    "codes": "Codes",
+    "guide": "Guide",
+    "progression": "Progression",
+    "mechanics": "Mechanics",
+    "tips": "Tips",
+    "updates": "Updates",
+    "discord": "Discord",
+    "community": "Community"
+  },
+  "home": {
+    "meta": {
+      "title": "drive-thruempire Wiki - Guías, Códigos y Trucos de Roblox",
+      "description": "Domina Drive-Thru Empire en Roblox con códigos actualizados, consejos de automatización, mejoras de cocina y superdeportivos."
+    },
+    "hero": {
+      "badge": "Roblox Tycoon • Actualizado para 2026",
+      "title": "Construye tu imperio definitivo de comida rápida",
+      "description": "Acelera tus pedidos en el drive-thru, equipa parrillas de alta velocidad, automatiza estaciones y colecciona exóticos superdeportivos en Drive-Thru Empire.",
+      "viewAllGuides": "Explorar guías",
+      "exploreTierList": "Ver códigos activos",
+      "quickStat1Value": "130+",
+      "quickStat1Label": "Guías y artículos",
+      "quickStat2Value": "100%",
+      "quickStat2Label": "Gratis y actualizado",
+      "quickStat3Value": "24/7",
+      "quickStat3Label": "Comunidad activa",
+      "primaryCta": "Comenzar guía",
+      "secondaryCta": "Últimos códigos",
+      "features": [
+        "Códigos activos verificados diariamente",
+        "Estrategias de distribución y eficiencia de cocina",
+        "Rutas de desbloqueo de superdeportivos y colecciones"
+      ]
+    },
+    "updates": {
+      "badge": "Novedades",
+      "title": "Últimas actualizaciones y guías",
+      "description": "Mantente al día con las notas de parche más recientes, nuevos códigos de recompensa y análisis en profundidad de mecánicas.",
+      "viewAll": "Ver todas las actualizaciones"
+    },
+    "start": {
+      "badge": "Comenzar",
+      "title": "Guías esenciales para principiantes",
+      "description": "Aprende los fundamentos paso a paso para pasar de un humilde puesto de hamburguesas a un coloso multimillonario.",
+      "guides": [
+        {
+          "title": "Guía de inicio rápido",
+          "description": "Aprende el ciclo básico: tomar pedidos, preparar ingredientes y cobrar a tiempo.",
+          "href": "/guide"
+        },
+        {
+          "title": "Estrategia de actualización de cocina",
+          "description": "Prioriza las mejores freidoras, parrillas y dispensadores para maximizar ganancias.",
+          "href": "/progression"
+        },
+        {
+          "title": "Colección de superdeportivos",
+          "description": "Desbloquea hiperdeportivos de lujo para impresionar a los clientes y acelerar entregas.",
+          "href": "/mechanics"
+        },
+        {
+          "title": "Códigos de canje y recompensas",
+          "description": "Consigue dinero y potenciadores gratis canjeando los códigos oficiales activos.",
+          "href": "/codes"
+        }
+      ]
+    },
+    "popular": {
+      "badge": "Lo más popular",
+      "title": "Temas destacados de la comunidad",
+      "description": "Las guías y estrategias más consultadas por los magnates de Drive-Thru Empire."
+    },
+    "aboutGame": {
+      "badge": "Sobre el juego",
+      "title": "¿Qué es Drive-Thru Empire?",
+      "description": "Drive-Thru Empire es una experiencia tycoon de ritmo rápido en Roblox desarrollada por DRAIN CCU Games. Combina la adrenalina de la gestión de un restaurante drive-thru con la emoción de coleccionar superdeportivos de lujo.",
+      "feature1Title": "Gestión dinámica de cocina",
+      "feature1Desc": "Prepara hamburguesas, patatas fritas y bebidas bajo presión mientras optimizas cada estación de trabajo.",
+      "feature2Title": "Lujo y superdeportivos",
+      "feature2Desc": "Invierte tus ganancias culinarias en deportivos exóticos, hiperdeportivos y mejoras estéticas exclusivas.",
+      "feature3Title": "Expansión sin límites",
+      "feature3Desc": "Abre nuevos carriles de servicio, contrata personal automatizado y escala tu imperio por todo el mapa."
+    },
+    "explore": {
+      "badge": "Explorar",
+      "title": "Módulos de Drive-Thru Empire",
+      "description": "Navega por nuestras secciones dedicadas para encontrar rápidamente la información exacta que necesitas.",
+      "modules": [
+        {
+          "name": "drive-thruempire Codes",
+          "description": "Códigos promocionales actualizados con dinero en efectivo y multiplicadores temporales.",
+          "path": "/codes",
+          "highlights": [
+            {
+              "label": "Roblox"
+            },
+            {
+              "label": "Rewards"
+            },
+            {
+              "label": "Cash"
+            }
+          ]
+        },
+        {
+          "name": "drive-thruempire Guide",
+          "description": "Tutoriales completos para nuevos jugadores y técnicas avanzadas de gestión.",
+          "path": "/guide",
+          "highlights": [
+            {
+              "label": "Basics"
+            },
+            {
+              "label": "Kitchen"
+            },
+            {
+              "label": "Efficiency"
+            }
+          ]
+        },
+        {
+          "name": "drive-thruempire Progression",
+          "description": "Rutas de progresión óptimas, costes de renovación e hitos de prestigio.",
+          "path": "/progression",
+          "highlights": [
+            {
+              "label": "Upgrades"
+            },
+            {
+              "label": "Prestige"
+            },
+            {
+              "label": "Milestones"
+            }
+          ]
+        },
+        {
+          "name": "drive-thruempire Mechanics",
+          "description": "Desglose técnico de tiempos de cocción, paciencia de clientes y flujo de tráfico.",
+          "path": "/mechanics",
+          "highlights": [
+            {
+              "label": "Timers"
+            },
+            {
+              "label": "Traffic"
+            },
+            {
+              "label": "Orders"
+            }
+          ]
+        },
+        {
+          "name": "drive-thruempire Tips",
+          "description": "Consejos profesionales y atajos para exprimir al máximo cada segundo de juego.",
+          "path": "/tips",
+          "highlights": [
+            {
+              "label": "ProTips"
+            },
+            {
+              "label": "Shortcuts"
+            },
+            {
+              "label": "Strategy"
+            }
+          ]
+        },
+        {
+          "name": "drive-thruempire Updates",
+          "description": "Historial de parches, nuevas recetas, eventos temporales y notas de lanzamiento.",
+          "path": "/updates",
+          "highlights": [
+            {
+              "label": "Patches"
+            },
+            {
+              "label": "Events"
+            },
+            {
+              "label": "Recipes"
+            }
+          ]
+        },
+        {
+          "name": "drive-thruempire Discord",
+          "description": "Conéctate con la comunidad oficial en Discord y comparte tus récords.",
+          "path": "/discord",
+          "highlights": [
+            {
+              "label": "Community"
+            },
+            {
+              "label": "Chat"
+            },
+            {
+              "label": "Announcements"
+            }
+          ]
+        },
+        {
+          "name": "drive-thruempire Community",
+          "description": "Comparte diseños de restaurantes, configuraciones de garaje y conéctate con otros jugadores.",
+          "path": "/community",
+          "highlights": [
+            {
+              "label": "Showcase"
+            },
+            {
+              "label": "Builds"
+            },
+            {
+              "label": "Discussions"
+            }
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "badge": "Preguntas frecuentes",
+      "title": "Preguntas habituales sobre Drive-Thru Empire",
+      "description": "Respuestas directas a las dudas más comunes de los jugadores de Drive-Thru Empire.",
+      "q1": "¿Cómo canjeo códigos en Drive-Thru Empire?",
+      "a1": "Haz clic en el icono de Twitter/Códigos en el menú lateral de la pantalla, introduce el código activo y pulsa Canjear para recibir tus recompensas instantáneamente.",
+      "q2": "¿Cuál es la mejor mejora al principio del juego?",
+      "a2": "Mejorar la velocidad de la parrilla y añadir una segunda freidora ofrece el mayor retorno de inversión inicial, reduciendo los cuellos de botella de los pedidos.",
+      "q3": "¿Cómo desbloqueo nuevos superdeportivos?",
+      "a3": "Los superdeportivos se desbloquean alcanzando ciertos hitos de ganancias netas y completando objetivos de prestigio en el concesionario del juego.",
+      "q4": "¿El juego se guarda automáticamente?",
+      "a4": "Sí, tu progreso, mejoras de restaurante y vehículos coleccionados se guardan automáticamente en los servidores de Roblox."
+    },
+    "finalCta": {
+      "title": "¿Listo para dominar el Drive-Thru?",
+      "description": "Únete a miles de jugadores, utiliza nuestras guías y códigos verificados y construye el restaurante más rentable de Roblox hoy mismo.",
+      "button": "Jugar en Roblox"
+    }
+  },
+  "shared": {
+    "wikiNavigation": "Navegación Wiki",
+    "activeCodes": "Códigos Activos",
+    "updated": "Actualizado",
+    "viewAllCodes": "Ver todos los códigos",
+    "playOnRoblox": "Jugar en Roblox",
+    "inThisSection": "En esta sección",
+    "tableOfContents": "Tabla de contenidos",
+    "nextSteps": "Siguientes pasos",
+    "needHelp": "¿Necesitas ayuda?",
+    "relatedReading": "Lecturas recomendadas",
+    "relatedGuides": "Guías relacionadas",
+    "readMore": "Leer más",
+    "officialMedia": "Medios oficiales",
+    "home": "Inicio",
+    "noGuidesAvailable": "No hay guías disponibles actualmente en esta sección."
+  },
+  "footer": {
+    "aboutTitle": "Sobre drive-thruempire Wiki",
+    "about": "La enciclopedia comunitaria y guía definitiva para Drive-Thru Empire en Roblox. Proporcionamos códigos verificados, guías detalladas y análisis de mecánicas.",
+    "quickLinks": "Enlaces rápidos",
+    "guides": "Guías",
+    "legal": "Legal",
+    "copyright": "Todos los derechos reservados.",
+    "description": "Tu portal de referencia para códigos, estrategias y guías de Drive-Thru Empire en Roblox.",
+    "playGame": "Jugar en Roblox",
+    "officialDiscord": "Discord oficial",
+    "officialYoutube": "YouTube oficial",
+    "vvBuilder": "Herramientas de construcción",
+    "beginnerGuide": "Guía para principiantes",
+    "raceGuides": "Guías de progresión",
+    "bossGuides": "Guías de cocina",
+    "buildGuide": "Guía de mejoras",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio"
+  },
+  "codes": {
+    "overviewTitle": "Códigos de Drive-Thru Empire",
+    "overviewDescription": "Lista actualizada de todos los códigos activos de Drive-Thru Empire para conseguir dinero gratis, multiplicadores y recompensas exclusivas."
+  },
+  "guide": {
+    "overviewTitle": "Guías de Drive-Thru Empire",
+    "overviewDescription": "Guías paso a paso completas, desde la configuración inicial hasta técnicas avanzadas de servicio rápido."
+  },
+  "progression": {
+    "overviewTitle": "Progresión de Drive-Thru Empire",
+    "overviewDescription": "Estrategias de inversión óptimas, árboles de mejoras de restaurante e hitos de prestigio."
+  },
+  "mechanics": {
+    "overviewTitle": "Mecánicas de Drive-Thru Empire",
+    "overviewDescription": "Análisis exhaustivo del flujo de clientes, tiempos de preparación y mecánicas internas del juego."
+  },
+  "tips": {
+    "overviewTitle": "Consejos de Drive-Thru Empire",
+    "overviewDescription": "Estrategias de élite, consejos de optimización y atajos para maximizar tus ingresos por hora."
+  },
+  "updates": {
+    "overviewTitle": "Actualizaciones de Drive-Thru Empire",
+    "overviewDescription": "Notas de parches recientes, nuevos lanzamientos de contenido, recetas inéditas y eventos especiales."
+  },
+  "discord": {
+    "overviewTitle": "Discord de Drive-Thru Empire",
+    "overviewDescription": "Información sobre el servidor oficial de Discord, canales de la comunidad, anuncios y soporte."
+  },
+  "community": {
+    "overviewTitle": "Comunidad de Drive-Thru Empire",
+    "overviewDescription": "Espacio comunitario con exhibiciones de restaurantes de jugadores, sugerencias y debates."
+  }
+}
