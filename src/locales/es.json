@@ -22,226 +22,404 @@
       "description": "Domina Drive-Thru Empire en Roblox con códigos actualizados, consejos de automatización, mejoras de cocina y superdeportivos."
     },
     "hero": {
-      "badge": "Roblox Tycoon • Actualizado para 2026",
       "title": "Construye tu imperio definitivo de comida rápida",
       "description": "Acelera tus pedidos en el drive-thru, equipa parrillas de alta velocidad, automatiza estaciones y colecciona exóticos superdeportivos en Drive-Thru Empire.",
-      "viewAllGuides": "Explorar guías",
-      "exploreTierList": "Ver códigos activos",
-      "quickStat1Value": "130+",
-      "quickStat1Label": "Guías y artículos",
-      "quickStat2Value": "100%",
-      "quickStat2Label": "Gratis y actualizado",
-      "quickStat3Value": "24/7",
-      "quickStat3Label": "Comunidad activa",
       "primaryCta": "Comenzar guía",
       "secondaryCta": "Últimos códigos",
-      "features": [
-        "Códigos activos verificados diariamente",
-        "Estrategias de distribución y eficiencia de cocina",
-        "Rutas de desbloqueo de superdeportivos y colecciones"
-      ]
+      "eyebrow": "Roblox Tycoon • 2026",
+      "stats": [
+        "DRAIN CCU Games",
+        "Restaurante y Coches",
+        "Build • Roll • Earn",
+        "100% Gratis"
+      ],
+      "tertiaryCta": "Ver Coches",
+      "videoLabel": "Ver Tráiler"
     },
     "updates": {
-      "badge": "Novedades",
       "title": "Últimas actualizaciones y guías",
-      "description": "Mantente al día con las notas de parche más recientes, nuevos códigos de recompensa y análisis en profundidad de mecánicas.",
-      "viewAll": "Ver todas las actualizaciones"
+      "viewAll": "Ver todas las actualizaciones",
+      "browse": "Ver Todos los Códigos y Guías"
     },
     "start": {
-      "badge": "Comenzar",
       "title": "Guías esenciales para principiantes",
-      "description": "Aprende los fundamentos paso a paso para pasar de un humilde puesto de hamburguesas a un coloso multimillonario.",
-      "guides": [
+      "eyebrow": "Cómo Empezar",
+      "cards": [
         {
-          "title": "Guía de inicio rápido",
-          "description": "Aprende el ciclo básico: tomar pedidos, preparar ingredientes y cobrar a tiempo.",
-          "href": "/guide"
+          "number": "1",
+          "title": "Guía para Principiantes",
+          "description": "Domina el bucle básico de Construir, Rodar y Ganar desde el primer día, atendiendo tus primeros pedidos y aprendiendo los controles del restaurante."
         },
         {
-          "title": "Estrategia de actualización de cocina",
-          "description": "Prioriza las mejores freidoras, parrillas y dispensadores para maximizar ganancias.",
-          "href": "/progression"
+          "number": "2",
+          "title": "Guía de Dinero Rápido",
+          "description": "Acelera tu flujo de efectivo optimizando la velocidad de servicio y reinvirtiendo ganancias en mejoras clave de cocina."
         },
         {
-          "title": "Colección de superdeportivos",
-          "description": "Desbloquea hiperdeportivos de lujo para impresionar a los clientes y acelerar entregas.",
-          "href": "/mechanics"
+          "number": "3",
+          "title": "Colección de Vehículos y Rerolls",
+          "description": "Aprende a rodar para conseguir superdeportivos exóticos que atraen clientes VIP y grandes multiplicadores de ingresos."
         },
         {
-          "title": "Códigos de canje y recompensas",
-          "description": "Consigue dinero y potenciadores gratis canjeando los códigos oficiales activos.",
-          "href": "/codes"
+          "number": "4",
+          "title": "Códigos y Recompensas",
+          "description": "Canjea códigos promocionales activos para obtener dinero gratis, rerolls de coches y aumentos de progreso temprano."
         }
       ]
     },
     "popular": {
-      "badge": "Lo más popular",
       "title": "Temas destacados de la comunidad",
-      "description": "Las guías y estrategias más consultadas por los magnates de Drive-Thru Empire."
+      "eyebrow": "Artículos Populares",
+      "quickLinks": [
+        "Códigos",
+        "Superdeportivos",
+        "Mejoras de Cocina",
+        "Guía para Principiantes"
+      ],
+      "cards": [
+        {
+          "badge": "Principiante",
+          "title": "Guía para Principiantes",
+          "description": "Todo lo que necesitas desde tu primer pedido hasta dominar el bucle de construcción y ganancias.",
+          "href": "/guide/drive-thru-empire-beginner-guide"
+        },
+        {
+          "badge": "Actualizado",
+          "title": "Códigos Activos",
+          "description": "Todos los códigos de trabajo con recompensas gratis, canjéalos antes de que caduquen.",
+          "href": "/codes"
+        },
+        {
+          "badge": "Actualizado",
+          "title": "Superdeportivos Exóticos",
+          "description": "Catálogo completo de vehículos con estadísticas de velocidad y multiplicadores de ingresos.",
+          "href": "/mechanics"
+        },
+        {
+          "badge": "Popular",
+          "title": "Mejoras de Cocina",
+          "description": "Mejores parrillas y dispensadores para automatizar pedidos y duplicar tus ganancias.",
+          "href": "/progression"
+        },
+        {
+          "badge": "Nuevo",
+          "title": "Estrategias de Dinero Rápido",
+          "description": "Rutas y consejos óptimos para maximizar ingresos por minuto en tu drive-thru.",
+          "href": "/tips"
+        },
+        {
+          "badge": "Popular",
+          "title": "Guía de Recompensas y Rangos",
+          "description": "Desbloquea logros de franquicia y obtén tiradas exclusivas de vehículos.",
+          "href": "/progression"
+        },
+        {
+          "badge": "Popular",
+          "title": "Comunidad y Discord",
+          "description": "Conéctate con otros jugadores para intercambiar consejos y novedades de parches.",
+          "href": "/community"
+        },
+        {
+          "badge": "Nuevo",
+          "title": "Niveles de Vehículos",
+          "description": "Lista de rareza de coches ordenados por multiplicadores y velocidad de entrega.",
+          "href": "/mechanics"
+        },
+        {
+          "badge": "Nuevo",
+          "title": "Eventos y Bonificaciones",
+          "description": "Multiplicadores de fines de semana y bonos VIP para ganar más rápido.",
+          "href": "/updates"
+        }
+      ]
     },
     "aboutGame": {
-      "badge": "Sobre el juego",
       "title": "¿Qué es Drive-Thru Empire?",
-      "description": "Drive-Thru Empire es una experiencia tycoon de ritmo rápido en Roblox desarrollada por DRAIN CCU Games. Combina la adrenalina de la gestión de un restaurante drive-thru con la emoción de coleccionar superdeportivos de lujo.",
-      "feature1Title": "Gestión dinámica de cocina",
-      "feature1Desc": "Prepara hamburguesas, patatas fritas y bebidas bajo presión mientras optimizas cada estación de trabajo.",
-      "feature2Title": "Lujo y superdeportivos",
-      "feature2Desc": "Invierte tus ganancias culinarias en deportivos exóticos, hiperdeportivos y mejoras estéticas exclusivas.",
-      "feature3Title": "Expansión sin límites",
-      "feature3Desc": "Abre nuevos carriles de servicio, contrata personal automatizado y escala tu imperio por todo el mapa."
+      "paragraphs": [
+        "Drive-Thru Empire es una experiencia inmersiva de simulación de restaurante de comida rápida y colección de coches en Roblox desarrollada por DRAIN CCU Games. Los jugadores construyen y expanden su propio imperio de drive-thru, atendiendo pedidos de clientes, sirviendo comidas deliciosas y consiguiendo superdeportivos de lujo para multiplicar sus ganancias.",
+        "Desde un modesto puesto de carretera de un solo carril hasta una enorme franquicia gastronómica con estaciones automatizadas y vehículos exóticos, nuestra wiki ofrece guías completas, rutas de mejora y estrategias para dominar la clasificación."
+      ],
+      "stats": [
+        {
+          "label": "Desarrollador",
+          "value": "DRAIN CCU Games"
+        },
+        {
+          "label": "Plataforma",
+          "value": "Roblox (PC, Móvil, Consola)"
+        },
+        {
+          "label": "Género",
+          "value": "Simulador Tycoon"
+        },
+        {
+          "label": "Bucle Principal",
+          "value": "Build • Roll • Earn"
+        }
+      ],
+      "cta": "Leer Guía Completa"
     },
     "explore": {
-      "badge": "Explorar",
       "title": "Módulos de Drive-Thru Empire",
       "description": "Navega por nuestras secciones dedicadas para encontrar rápidamente la información exacta que necesitas.",
       "modules": [
         {
+          "order": 1,
           "name": "drive-thruempire Codes",
-          "description": "Códigos promocionales actualizados con dinero en efectivo y multiplicadores temporales.",
-          "path": "/codes",
+          "description": "Consulta los códigos activos de Drive-Thru Empire, recompensas e instrucciones de canje para dinero y mejoras gratis.",
+          "href": "/codes/drive-thru-empire-codes",
+          "displayType": "code-cards",
           "highlights": [
             {
-              "label": "Roblox"
+              "label": "RELEASE",
+              "detail": "Dinero inicial gratuito y potenciador",
+              "badge": "Activo"
             },
             {
-              "label": "Rewards"
+              "label": "EMPIRE",
+              "detail": "Recompensa de dinero para expansión del restaurante",
+              "badge": "Activo"
             },
             {
-              "label": "Cash"
+              "label": "CARROLL",
+              "detail": "Ticket gratuito de tirada para superdeportivo",
+              "badge": "Nuevo"
+            },
+            {
+              "label": "5KLIKES",
+              "detail": "Bonificación exclusiva para clientes",
+              "badge": "Activo"
             }
           ]
         },
         {
-          "name": "drive-thruempire Guide",
-          "description": "Tutoriales completos para nuevos jugadores y técnicas avanzadas de gestión.",
-          "path": "/guide",
+          "order": 2,
+          "name": "drive-thruempire Beginner Guide",
+          "description": "Sigue nuestro tutorial paso a paso para construir tu primer carril de drive-thru, tomar pedidos y ganar beneficios iniciales.",
+          "href": "/guide/drive-thru-empire-beginner-guide",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "Basics"
+              "label": "1",
+              "detail": "Construye tu interfono de pedidos inicial y ventana de entrega"
             },
             {
-              "label": "Kitchen"
+              "label": "2",
+              "detail": "Toma los pedidos de vehículos en el mostrador"
             },
             {
-              "label": "Efficiency"
+              "label": "3",
+              "detail": "Prepara hamburguesas y bebidas rápidamente en las estaciones"
+            },
+            {
+              "label": "4",
+              "detail": "Sirve pedidos calientes a tiempo para ganar dinero y propinas"
+            },
+            {
+              "label": "5",
+              "detail": "Tira por tu primer vehículo para atraer clientes de nivel superior"
+            },
+            {
+              "label": "6",
+              "detail": "Reinvierte ganancias iniciales en velocidad y cintas transportadoras"
             }
           ]
         },
         {
-          "name": "drive-thruempire Progression",
-          "description": "Rutas de progresión óptimas, costes de renovación e hitos de prestigio.",
-          "path": "/progression",
+          "order": 3,
+          "name": "drive-thruempire Car Rarities",
+          "description": "Explora la lista de niveles de vehículos desde coches básicos diarios hasta hiperdeportivos legendarios para clientes VIP.",
+          "href": "/guide/drive-thru-empire-car-tier-list",
+          "displayType": "tier-grid",
           "highlights": [
             {
-              "label": "Upgrades"
+              "label": "S",
+              "detail": "Hiperdeportivos Exóticos y Prototipos — Multiplicadores 10x+ e invitados VIP"
             },
             {
-              "label": "Prestige"
+              "label": "A",
+              "detail": "Superdeportivos y Gran Turismo — Bonos 5x de dinero y rotación rápida"
             },
             {
-              "label": "Milestones"
+              "label": "B",
+              "detail": "Coupés Deportivos y Muscle Cars — 2.5x ganancias con buen escalado"
+            },
+            {
+              "label": "C",
+              "detail": "Sedanes y Compactos — Vehículos iniciales fiables para ingresos tempranos"
             }
           ]
         },
         {
-          "name": "drive-thruempire Mechanics",
-          "description": "Desglose técnico de tiempos de cocción, paciencia de clientes y flujo de tráfico.",
-          "path": "/mechanics",
+          "order": 4,
+          "name": "drive-thruempire Restaurant Upgrades",
+          "description": "Descubre las rutas óptimas de mejora para velocidad de cocina, cintas automáticas, carriles adicionales y comedor.",
+          "href": "/guide/drive-thru-empire-best-upgrades",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Timers"
+              "label": "Parrillas",
+              "detail": "Parrillas de gran capacidad que duplican la velocidad de cocción"
             },
             {
-              "label": "Traffic"
+              "label": "Freidoras",
+              "detail": "Freidoras automáticas para patatas doradas sin desperdicio"
             },
             {
-              "label": "Orders"
+              "label": "Bebidas",
+              "detail": "Estaciones de dispensadores múltiples para servicio inmediato"
+            },
+            {
+              "label": "Cintas",
+              "detail": "Cintas motorizadas que llevan los pedidos directos a la entrega"
+            },
+            {
+              "label": "Personal",
+              "detail": "Cocineros y cajeros automáticos que gestionan pedidos de forma pasiva"
+            },
+            {
+              "label": "Carriles",
+              "detail": "Expansión a doble carril para atender vehículos simultáneos"
             }
           ]
         },
         {
-          "name": "drive-thruempire Tips",
-          "description": "Consejos profesionales y atajos para exprimir al máximo cada segundo de juego.",
-          "path": "/tips",
+          "order": 5,
+          "name": "drive-thruempire Fast Money Guide",
+          "description": "Maximiza tus ingresos por hora con estrategias para combos, multiplicadores de vehículos y bonificaciones continuas.",
+          "href": "/guide/drive-thru-empire-fast-money-guide",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "ProTips"
+              "label": "1",
+              "detail": "Mantén colas sin espera para activar rachas de propinas"
             },
             {
-              "label": "Shortcuts"
+              "label": "2",
+              "detail": "Equipa coches de máxima rareza para atraer clientes adinerados"
             },
             {
-              "label": "Strategy"
+              "label": "3",
+              "detail": "Prioriza mejoras de bebidas y complementos para más margen"
+            },
+            {
+              "label": "4",
+              "detail": "Activa códigos promocionales para inyecciones instantáneas de dinero"
             }
           ]
         },
         {
-          "name": "drive-thruempire Updates",
-          "description": "Historial de parches, nuevas recetas, eventos temporales y notas de lanzamiento.",
-          "path": "/updates",
+          "order": 6,
+          "name": "drive-thruempire Supercar Collection",
+          "description": "Descubre todos los vehículos coleccionables de Drive-Thru Empire, probabilidades de obtención y ventajas de ingresos.",
+          "href": "/guide/drive-thru-empire-cars",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Patches"
+              "label": "Hypercar",
+              "detail": "Modelos de lujo superior que otorgan las mayores propinas"
             },
             {
-              "label": "Events"
+              "label": "Supercar",
+              "detail": "Vehículos deportivos de alta velocidad que aceleran clientes"
             },
             {
-              "label": "Recipes"
+              "label": "Classic",
+              "detail": "Coches clásicos de colección con bonos estables de fidelidad"
+            },
+            {
+              "label": "Roadster",
+              "detail": "Descapotables elegantes que aumentan la satisfacción general"
+            },
+            {
+              "label": "SUV",
+              "detail": "Vehículos familiares que piden grandes combos de varios platos"
+            },
+            {
+              "label": "Cruiser",
+              "detail": "Coches urbanos comunes que aseguran un flujo de dinero estable"
             }
           ]
         },
         {
-          "name": "drive-thruempire Discord",
-          "description": "Conéctate con la comunidad oficial en Discord y comparte tus récords.",
-          "path": "/discord",
+          "order": 7,
+          "name": "drive-thruempire Updates & Patch Notes",
+          "description": "Mantente al día con las últimas actualizaciones de versión, balance, nuevas tiradas de vehículos y funciones.",
+          "href": "/guide/drive-thru-empire-updates",
+          "displayType": "step-by-step",
           "highlights": [
             {
-              "label": "Community"
+              "label": "1",
+              "detail": "Nuevo lote de tiradas de superdeportivos exóticos exclusivos"
             },
             {
-              "label": "Chat"
+              "label": "2",
+              "detail": "Expansión de automatización de cocina con cintas mejoradas"
             },
             {
-              "label": "Announcements"
+              "label": "3",
+              "detail": "Ajustes de calidad de vida en la paciencia de espera de clientes"
+            },
+            {
+              "label": "4",
+              "detail": "Nuevos códigos añadidos por hitos de la comunidad"
             }
           ]
         },
         {
-          "name": "drive-thruempire Community",
-          "description": "Comparte diseños de restaurantes, configuraciones de garaje y conéctate con otros jugadores.",
-          "path": "/community",
+          "order": 8,
+          "name": "drive-thruempire Community Hub",
+          "description": "Conéctate con otros dueños de restaurantes, comparte diseños óptimos de cocina y sigue anuncios oficiales.",
+          "href": "/guide/drive-thru-empire-community",
+          "displayType": "card-list",
           "highlights": [
             {
-              "label": "Showcase"
+              "label": "Roblox",
+              "detail": "Grupo oficial de Roblox de DRAIN CCU Games para noticias y ventajas"
             },
             {
-              "label": "Builds"
+              "label": "Discord",
+              "detail": "Servidor de la comunidad para códigos nuevos y charlas"
             },
             {
-              "label": "Discussions"
+              "label": "Guías",
+              "detail": "Consejos creados por la comunidad y desglose de probabilidades"
+            },
+            {
+              "label": "Feedback",
+              "detail": "Canal directo para sugerir funciones e informar de errores"
             }
           ]
         }
       ]
     },
     "faq": {
-      "badge": "Preguntas frecuentes",
       "title": "Preguntas habituales sobre Drive-Thru Empire",
       "description": "Respuestas directas a las dudas más comunes de los jugadores de Drive-Thru Empire.",
-      "q1": "¿Cómo canjeo códigos en Drive-Thru Empire?",
-      "a1": "Haz clic en el icono de Twitter/Códigos en el menú lateral de la pantalla, introduce el código activo y pulsa Canjear para recibir tus recompensas instantáneamente.",
-      "q2": "¿Cuál es la mejor mejora al principio del juego?",
-      "a2": "Mejorar la velocidad de la parrilla y añadir una segunda freidora ofrece el mayor retorno de inversión inicial, reduciendo los cuellos de botella de los pedidos.",
-      "q3": "¿Cómo desbloqueo nuevos superdeportivos?",
-      "a3": "Los superdeportivos se desbloquean alcanzando ciertos hitos de ganancias netas y completando objetivos de prestigio en el concesionario del juego.",
-      "q4": "¿El juego se guarda automáticamente?",
-      "a4": "Sí, tu progreso, mejoras de restaurante y vehículos coleccionados se guardan automáticamente en los servidores de Roblox."
+      "items": [
+        {
+          "question": "¿Qué es Drive-Thru Empire en Roblox?",
+          "answer": "Drive-Thru Empire es un juego tycoon en Roblox donde construyes un restaurante de autoservicio de comida rápida, preparas pedidos para clientes y coleccionas superdeportivos que aumentan tus ingresos."
+        },
+        {
+          "question": "¿Cómo canjeo códigos en Drive-Thru Empire?",
+          "answer": "Abre Drive-Thru Empire en Roblox, haz clic en el icono de Códigos (o botón de pájaro de Twitter en el menú), introduce el código de trabajo y pulsa Canjear para recibir recompensas instantáneas."
+        },
+        {
+          "question": "¿Cómo consigo mejores superdeportivos y coches exóticos?",
+          "answer": "Usa la función de gacha/roll en el concesionario de vehículos usando monedas del juego o tiradas obtenidas mediante recompensas de hitos y códigos activos."
+        },
+        {
+          "question": "¿Cuál es la forma más rápida de ganar dinero en Drive-Thru Empire?",
+          "answer": "Mejora primero tus parrillas y dispensadores para reducir el tiempo de cocción, mantén las estaciones automatizadas y equipa tus mejores multiplicadores de vehículos."
+        }
+      ]
     },
     "finalCta": {
       "title": "¿Listo para dominar el Drive-Thru?",
       "description": "Únete a miles de jugadores, utiliza nuestras guías y códigos verificados y construye el restaurante más rentable de Roblox hoy mismo.",
-      "button": "Jugar en Roblox"
+      "primary": "Comenzar con la Guía",
+      "secondary": "Jugar en Roblox"
     }
   },
   "shared": {

@@ -24,7 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${siteUrl}/${locale}${path === "/" ? "" : path}`,
       lastModified: new Date(),
       changeFrequency: path === "/" ? ("daily" as const) : ("weekly" as const),
-      priority: path === "/" ? 1 : contentCategoryPaths.includes(path as `/${string}`) ? 0.8 : 0.6,
+      priority: path === "/" ? 1 : (contentCategoryPaths as string[]).includes(path) ? 0.8 : 0.6,
     })),
   );
 }

@@ -49,17 +49,39 @@ export interface ContentMetadata {
   category: string;
   date: string;
   lastModified?: string;
+  image?: string;
   badge?: string;
+  summary?: string;
   keywords?: string[];
-  [key: string]: any;
+  [key: string]: unknown;
+}
+
+// Heading 结构（从 MDX 源文件提取）
+export interface Heading {
+  id: string;
+  text: string;
+  level: number;
 }
 
 // 内容项接口
 export interface ContentItem {
-  slug: string[];
+  slug: string;
+  segments: string[];
+  contentType: string;
+  locale: Locale;
   metadata: ContentMetadata;
-  content: string;
 }
+
+// 内容数据接口（含 MDX 组件）
+export type ContentData = {
+  slug: string;
+  segments: string[];
+  contentType: string;
+  locale: Locale;
+  metadata: ContentMetadata;
+  MDXContent: React.ComponentType;
+  headings: Heading[];
+};
 
 // 文章数据接口（含展示用字段）
 export interface ArticleItem {
@@ -85,6 +107,41 @@ export interface NavGroup {
 const CONTENT_ROOT = path.join(process.cwd(), "content");
 
 /**
+ * 从 MDX 源文件中提取 ## 和 ### 标题
+ */
+function extractHeadings(mdxSource: string): Heading[] {
+  const headings: Heading[] = [];
+  const lines = mdxSource.split("\n");
+  for (const line of lines) {
+    const match = line.match(/^(#{2,3})\s+(.+)/);
+    if (match) {
+      const level = match[1].length;
+      const text = match[2].replace(/\{[^}]*\}/g, "").trim();
+      const id = text
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/\s+/g, "-")
+        .replace(/-+/g, "-")
+        .replace(/^-|-$/g, "");
+      headings.push({ id, text, level });
+    }
+  }
+  return headings;
+}
+
+/**
+ * 读取 MDX 源文件并提取 headings
+ */
+function getHeadingsFromFile(filePath: string): Heading[] {
+  try {
+    const source = fs.readFileSync(filePath, "utf-8");
+    return extractHeadings(source);
+  } catch {
+    return [];
+  }
+}
+
+/**
  * 从目录递归获取所有 MDX 文件的 slug 数组
  * 例如 content/en/codes/fast-cash.mdx → ["fast-cash"]
  */
@@ -107,96 +164,106 @@ function getSlugsFromDirectory(dir: string, basePath: string[] = []): string[][]
 }
 
 /**
- * 获取指定内容类型和 slug 的完整内容
+ * 获取所有内容列表（支持递归读取嵌套目录）
+ * 使用动态 import 获取 MDX 文件的 metadata
  */
-export async function getContentItem(
-  contentType: string,
-  slugSegments: string[],
-  language: Locale = "en"
-): Promise<ContentItem | null> {
+export async function getAllContent(contentType: string, language: Locale = "en"): Promise<ContentItem[]> {
   const contentDir = path.join(CONTENT_ROOT, language, contentType);
-  const slug = slugSegments.join("/");
-  const mdxRelativePath = findFileBySlug(contentDir, slug);
+  const slugPaths = getSlugsFromDirectory(contentDir);
 
-  if (!mdxRelativePath) return null;
+  const items = await Promise.all(
+    slugPaths.map(async (segments) => {
+      const slug = segments.join("/");
+      try {
+        const realSlug = findFileBySlug(contentDir, slug) || slug;
+        const mod = await import(`../../content/${language}/${contentType}/${realSlug}.mdx`);
+        return {
+          slug,
+          segments,
+          contentType,
+          locale: language,
+          metadata: mod.metadata as ContentMetadata,
+        } satisfies ContentItem;
+      } catch {
+        return null;
+      }
+    }),
+  );
 
-  const fullPath = path.join(contentDir, `${mdxRelativePath}.mdx`);
-  if (!fs.existsSync(fullPath)) return null;
+  return items
+    .filter((item): item is ContentItem => Boolean(item))
+    .sort((a, b) => a.metadata.title.localeCompare(b.metadata.title));
+}
+
+/**
+ * 获取单个内容项（含 MDX 渲染后的内容组件）
+ * 使用动态 import 直接导入 .mdx 文件
+ */
+export async function getContent(contentType: string, slugSegments: string[], language: Locale = "en"): Promise<ContentData | null> {
+  const currentSlug = slugSegments.join("/");
+  const contentDir = path.join(CONTENT_ROOT, language, contentType);
 
   try {
-    const rawContent = fs.readFileSync(fullPath, "utf-8");
-
-    // 提取 export const metadata = { ... }
-    const metadataMatch = rawContent.match(/export\s+const\s+metadata\s*=\s*({[\s\S]*?});/);
-    let metadata: ContentMetadata = {
-      title: slugSegments[slugSegments.length - 1].replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
-      description: "",
-      category: contentType,
-      date: new Date().toISOString().split("T")[0],
-    };
-
-    if (metadataMatch) {
-      try {
-        const metadataStr = metadataMatch[1]
-          .replace(/(\w+):/g, '"$1":')
-          .replace(/'/g, '"')
-          .replace(/,\s*}/g, "}");
-        metadata = { ...metadata, ...JSON.parse(metadataStr) };
-      } catch {
-        // 解析失败时回退到正则提取关键字段
-        const titleMatch = rawContent.match(/title:\s*["'](.+?)["']/);
-        const descMatch = rawContent.match(/description:\s*["'](.+?)["']/);
-        if (titleMatch) metadata.title = titleMatch[1];
-        if (descMatch) metadata.description = descMatch[1];
-      }
-    }
-
-    // 移除 metadata 声明以获取正文
-    const contentWithoutMetadata = rawContent.replace(/export\s+const\s+metadata\s*=\s*{[\s\S]*?};/, "").trim();
+    const realSlug = findFileBySlug(contentDir, currentSlug) || currentSlug;
+    const mdxPath = path.join(contentDir, `${realSlug}.mdx`);
+    const { default: MDXContent, metadata } = await import(
+      `../../content/${language}/${contentType}/${realSlug}.mdx`
+    );
 
     return {
-      slug: slugSegments,
-      metadata,
-      content: contentWithoutMetadata,
+      slug: currentSlug,
+      segments: slugSegments,
+      contentType,
+      locale: language,
+      metadata: metadata as ContentMetadata,
+      MDXContent,
+      headings: getHeadingsFromFile(mdxPath),
     };
   } catch {
+    // Fallback 到英文
+    if (language !== routing.defaultLocale) {
+      try {
+        const enContentDir = path.join(CONTENT_ROOT, routing.defaultLocale, contentType);
+        const enRealSlug = findFileBySlug(enContentDir, currentSlug) || currentSlug;
+        const enMdxPath = path.join(enContentDir, `${enRealSlug}.mdx`);
+        const { default: MDXContent, metadata } = await import(
+          `../../content/${routing.defaultLocale}/${contentType}/${enRealSlug}.mdx`
+        );
+        return {
+          slug: currentSlug,
+          segments: slugSegments,
+          contentType,
+          locale: routing.defaultLocale,
+          metadata: metadata as ContentMetadata,
+          MDXContent,
+          headings: getHeadingsFromFile(enMdxPath),
+        };
+      } catch {
+        return null;
+      }
+    }
     return null;
   }
 }
 
 /**
- * 获取指定内容类型的全部文章列表
+ * 获取指定内容类型的全部文章列表（ArticleItem 格式）
  */
 export async function getContentList(
   contentType: string,
   language: Locale = "en"
 ): Promise<ArticleItem[]> {
-  const contentDir = path.join(CONTENT_ROOT, language, contentType);
-  const slugPaths = getSlugsFromDirectory(contentDir);
-
-  const items: ArticleItem[] = [];
-
-  for (const segments of slugPaths) {
-    const item = await getContentItem(contentType, segments, language);
-    if (!item) continue;
-
-    const slugStr = segments.join("/");
-    items.push({
-      title: item.metadata.title,
-      description: item.metadata.description,
-      slug: slugStr,
-      href: `/${contentType}/${slugStr}`,
-      category: item.metadata.category || contentType,
-      date: item.metadata.date,
-      badge: item.metadata.badge,
-      difficulty: item.metadata.difficulty,
-    });
-  }
-
-  // 按日期降序
-  items.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
-  return items;
+  const items = await getAllContent(contentType, language);
+  return items.map((item) => ({
+    title: item.metadata.title,
+    description: item.metadata.description,
+    slug: item.slug,
+    href: `/${contentType}/${item.slug}`,
+    category: item.metadata.category || contentType,
+    date: item.metadata.date,
+    badge: item.metadata.badge,
+    difficulty: typeof item.metadata.difficulty === "string" ? item.metadata.difficulty : undefined,
+  }));
 }
 
 /**
