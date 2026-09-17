@@ -49,227 +49,243 @@ export interface ContentMetadata {
   category: string;
   date: string;
   lastModified?: string;
-  image?: string;
   badge?: string;
-  summary?: string;
-}
-
-// Heading 结构（从 MDX 源文件提取）
-export interface Heading {
-  id: string;
-  text: string;
-  level: number;
+  keywords?: string[];
+  [key: string]: any;
 }
 
 // 内容项接口
 export interface ContentItem {
-  slug: string;
-  segments: string[];
-  contentType: string;
-  locale: Locale;
+  slug: string[];
   metadata: ContentMetadata;
+  content: string;
 }
 
-// 内容数据接口（含 MDX 组件）
-export type ContentData = {
+// 文章数据接口（含展示用字段）
+export interface ArticleItem {
+  title: string;
+  description: string;
   slug: string;
-  segments: string[];
-  contentType: string;
-  locale: Locale;
-  metadata: ContentMetadata;
-  MDXContent: React.ComponentType;
-  headings: Heading[];
-};
+  href: string;
+  category: string;
+  date: string;
+  badge?: string;
+  difficulty?: string;
+}
 
+// 导航链接接口
+export interface NavGroup {
+  title: string;
+  count: number;
+  slug: string;
+  links: Array<{ label: string; href: string; badge?: string }>;
+}
+
+// 内容根目录
 const CONTENT_ROOT = path.join(process.cwd(), "content");
 
 /**
- * 从 MDX 源文件中提取 ## 和 ### 标题
- */
-function extractHeadings(mdxSource: string): Heading[] {
-  const headings: Heading[] = [];
-  const lines = mdxSource.split("\n");
-  for (const line of lines) {
-    const match = line.match(/^(#{2,3})\s+(.+)/);
-    if (match) {
-      const level = match[1].length;
-      const text = match[2].replace(/\{[^}]*\}/g, "").trim();
-      const id = text
-        .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, "")
-        .replace(/\s+/g, "-")
-        .replace(/-+/g, "-")
-        .replace(/^-|-$/g, "");
-      headings.push({ id, text, level });
-    }
-  }
-  return headings;
-}
-
-/**
- * 读取 MDX 源文件并提取 headings
- */
-function getHeadingsFromFile(filePath: string): Heading[] {
-  try {
-    const source = fs.readFileSync(filePath, "utf-8");
-    return extractHeadings(source);
-  } catch {
-    return [];
-  }
-}
-
-/**
- * 辅助函数：递归获取目录下所有 MDX 文件的 slug 路径
+ * 从目录递归获取所有 MDX 文件的 slug 数组
+ * 例如 content/en/codes/fast-cash.mdx → ["fast-cash"]
  */
 function getSlugsFromDirectory(dir: string, basePath: string[] = []): string[][] {
   if (!fs.existsSync(dir)) return [];
   const entries = fs.readdirSync(dir, { withFileTypes: true });
-  const paths: string[][] = [];
+  const slugs: string[][] = [];
 
   for (const entry of entries) {
-    const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      paths.push(...getSlugsFromDirectory(fullPath, [...basePath, entry.name]));
+      const nested = getSlugsFromDirectory(path.join(dir, entry.name), [...basePath, entry.name]);
+      slugs.push(...nested);
     } else if (entry.name.endsWith(".mdx")) {
-      const fileName = entry.name.replace(".mdx", "");
-      paths.push([...basePath, fileNameToSlug(fileName)]);
+      const slugName = fileNameToSlug(entry.name);
+      slugs.push([...basePath, slugName]);
     }
   }
-  return paths;
+
+  return slugs;
 }
 
 /**
- * 获取所有内容列表（支持递归读取嵌套目录）
- * 使用动态 import 获取 MDX 文件的 metadata
+ * 获取指定内容类型和 slug 的完整内容
  */
-export async function getAllContent(contentType: string, language: Locale): Promise<ContentItem[]> {
+export async function getContentItem(
+  contentType: string,
+  slugSegments: string[],
+  language: Locale = "en"
+): Promise<ContentItem | null> {
   const contentDir = path.join(CONTENT_ROOT, language, contentType);
-  const slugPaths = getSlugsFromDirectory(contentDir);
+  const slug = slugSegments.join("/");
+  const mdxRelativePath = findFileBySlug(contentDir, slug);
 
-  const items = await Promise.all(
-    slugPaths.map(async (segments) => {
-      const slug = segments.join("/");
-      try {
-        const realSlug = findFileBySlug(contentDir, slug) || slug;
-        const mod = await import(`../../content/${language}/${contentType}/${realSlug}.mdx`);
-        return {
-          slug,
-          segments,
-          contentType,
-          locale: language,
-          metadata: mod.metadata as ContentMetadata,
-        } satisfies ContentItem;
-      } catch {
-        return null;
-      }
-    }),
-  );
+  if (!mdxRelativePath) return null;
 
-  return items
-    .filter((item): item is ContentItem => Boolean(item))
-    .sort((a, b) => a.metadata.title.localeCompare(b.metadata.title));
-}
-
-/**
- * 获取单个内容项（含 MDX 渲染后的内容组件）
- * 使用动态 import 直接导入 .mdx 文件
- */
-export async function getContent(contentType: string, slugSegments: string[], language: Locale): Promise<ContentData | null> {
-  const currentSlug = slugSegments.join("/");
-  const contentDir = path.join(CONTENT_ROOT, language, contentType);
+  const fullPath = path.join(contentDir, `${mdxRelativePath}.mdx`);
+  if (!fs.existsSync(fullPath)) return null;
 
   try {
-    const realSlug = findFileBySlug(contentDir, currentSlug) || currentSlug;
-    const mdxPath = path.join(contentDir, `${realSlug}.mdx`);
-    const { default: MDXContent, metadata } = await import(
-      `../../content/${language}/${contentType}/${realSlug}.mdx`
-    );
+    const rawContent = fs.readFileSync(fullPath, "utf-8");
 
-    return {
-      slug: currentSlug,
-      segments: slugSegments,
-      contentType,
-      locale: language,
-      metadata: metadata as ContentMetadata,
-      MDXContent,
-      headings: getHeadingsFromFile(mdxPath),
+    // 提取 export const metadata = { ... }
+    const metadataMatch = rawContent.match(/export\s+const\s+metadata\s*=\s*({[\s\S]*?});/);
+    let metadata: ContentMetadata = {
+      title: slugSegments[slugSegments.length - 1].replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+      description: "",
+      category: contentType,
+      date: new Date().toISOString().split("T")[0],
     };
-  } catch {
-    // Fallback 到英文
-    if (language !== routing.defaultLocale) {
+
+    if (metadataMatch) {
       try {
-        const enContentDir = path.join(CONTENT_ROOT, routing.defaultLocale, contentType);
-        const enRealSlug = findFileBySlug(enContentDir, currentSlug) || currentSlug;
-        const enMdxPath = path.join(enContentDir, `${enRealSlug}.mdx`);
-        const { default: MDXContent, metadata } = await import(
-          `../../content/${routing.defaultLocale}/${contentType}/${enRealSlug}.mdx`
-        );
-        return {
-          slug: currentSlug,
-          segments: slugSegments,
-          contentType,
-          locale: routing.defaultLocale,
-          metadata: metadata as ContentMetadata,
-          MDXContent,
-          headings: getHeadingsFromFile(enMdxPath),
-        };
+        const metadataStr = metadataMatch[1]
+          .replace(/(\w+):/g, '"$1":')
+          .replace(/'/g, '"')
+          .replace(/,\s*}/g, "}");
+        metadata = { ...metadata, ...JSON.parse(metadataStr) };
       } catch {
-        return null;
+        // 解析失败时回退到正则提取关键字段
+        const titleMatch = rawContent.match(/title:\s*["'](.+?)["']/);
+        const descMatch = rawContent.match(/description:\s*["'](.+?)["']/);
+        if (titleMatch) metadata.title = titleMatch[1];
+        if (descMatch) metadata.description = descMatch[1];
       }
     }
+
+    // 移除 metadata 声明以获取正文
+    const contentWithoutMetadata = rawContent.replace(/export\s+const\s+metadata\s*=\s*{[\s\S]*?};/, "").trim();
+
+    return {
+      slug: slugSegments,
+      metadata,
+      content: contentWithoutMetadata,
+    };
+  } catch {
     return null;
   }
 }
 
 /**
- * 导航分组结构（用于动态 Wiki Navigation）
+ * 获取指定内容类型的全部文章列表
  */
-export interface NavGroup {
-  /** 分组标题，来自目录名转人类可读格式，如 "bosses" → "Bosses" */
-  title: string;
-  /** 该分组下的文章数量 */
-  count: number;
-  /** 分组 slug（即目录名，如 "bosses"） */
-  slug: string;
-  /** 文章链接列表 */
-  links: Array<{ label: string; href: string; badge?: string }>;
+export async function getContentList(
+  contentType: string,
+  language: Locale = "en"
+): Promise<ArticleItem[]> {
+  const contentDir = path.join(CONTENT_ROOT, language, contentType);
+  const slugPaths = getSlugsFromDirectory(contentDir);
+
+  const items: ArticleItem[] = [];
+
+  for (const segments of slugPaths) {
+    const item = await getContentItem(contentType, segments, language);
+    if (!item) continue;
+
+    const slugStr = segments.join("/");
+    items.push({
+      title: item.metadata.title,
+      description: item.metadata.description,
+      slug: slugStr,
+      href: `/${contentType}/${slugStr}`,
+      category: item.metadata.category || contentType,
+      date: item.metadata.date,
+      badge: item.metadata.badge,
+      difficulty: item.metadata.difficulty,
+    });
+  }
+
+  // 按日期降序
+  items.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  return items;
+}
+
+/**
+ * 获取全站最近更新的文章（跨分类）
+ */
+export async function getRecentArticles(language: Locale = "en", limit = 6): Promise<ArticleItem[]> {
+  const allArticles: ArticleItem[] = [];
+
+  for (const type of CONTENT_TYPES) {
+    const list = await getContentList(type, language);
+    allArticles.push(...list);
+  }
+
+  allArticles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return allArticles.slice(0, limit);
 }
 
 // 分组标题映射：slug → 人类可读标题（默认英文）
-const GROUP_TITLES: Record<string, string> = {
-  bosses: "Bosses",
-  races: "Races",
-  maps: "Maps & Areas",
-  skills: "Skills",
+export const GROUP_TITLES: Record<string, string> = {
   codes: "Codes",
   guide: "Getting Started",
-  "tier-list": "Tier Lists",
+  progression: "Progression",
+  mechanics: "Mechanics",
+  tips: "Tips & Strategies",
+  updates: "Updates",
+  discord: "Discord",
+  community: "Community",
 };
 
-// 日文分组标题映射
-const GROUP_TITLES_JA: Record<string, string> = {
-  bosses: "ボス",
-  races: "種族",
-  maps: "マップ & エリア",
-  skills: "スキル",
-  codes: "コード",
-  guide: "初心者ガイド",
-  "tier-list": "Tier List",
+// 西语分组标题映射
+const GROUP_TITLES_ES: Record<string, string> = {
+  codes: "Códigos",
+  guide: "Guía de Inicio",
+  progression: "Progresión",
+  mechanics: "Mecánicas",
+  tips: "Consejos y Trucos",
+  updates: "Actualizaciones",
+  discord: "Discord",
+  community: "Comunidad",
+};
+
+// 葡语分组标题映射
+const GROUP_TITLES_PT: Record<string, string> = {
+  codes: "Códigos",
+  guide: "Guia para Iniciantes",
+  progression: "Progressão",
+  mechanics: "Mecânicas",
+  tips: "Dicas e Estratégias",
+  updates: "Atualizações",
+  discord: "Discord",
+  community: "Comunidade",
+};
+
+// 法语分组标题映射
+const GROUP_TITLES_FR: Record<string, string> = {
+  codes: "Codes",
+  guide: "Guide de Démarrage",
+  progression: "Progression",
+  mechanics: "Mécaniques",
+  tips: "Conseils et Astuces",
+  updates: "Mises à jour",
+  discord: "Discord",
+  community: "Communauté",
 };
 
 // locale → 分组标题映射
-const GROUP_TITLES_BY_LOCALE: Record<string, Record<string, string>> = {
-  ja: GROUP_TITLES_JA,
+export const GROUP_TITLES_BY_LOCALE: Record<string, Record<string, string>> = {
+  es: GROUP_TITLES_ES,
+  pt: GROUP_TITLES_PT,
+  fr: GROUP_TITLES_FR,
 };
 
 // locale → "Overview" 翻译
-const OVERVIEW_LABEL_BY_LOCALE: Record<string, string> = {
-  ja: "一覧",
+export const OVERVIEW_LABEL_BY_LOCALE: Record<string, string> = {
+  es: "Visión General",
+  pt: "Visão Geral",
+  fr: "Vue d'ensemble",
 };
 
 // 分组排序顺序
-const GROUP_ORDER: string[] = [
-  "guide", "races", "bosses", "maps", "skills", "codes", "tier-list",
+export const GROUP_ORDER: string[] = [
+  "codes",
+  "guide",
+  "progression",
+  "mechanics",
+  "tips",
+  "updates",
+  "discord",
+  "community",
 ];
 
 /**
@@ -348,17 +364,16 @@ export function getDynamicNavigation(language: Locale = "en"): NavGroup[] {
 /**
  * 获取所有内容路径（用于 generateStaticParams）
  */
-export async function getAllContentPaths(language: Locale) {
-  const localeDir = path.join(CONTENT_ROOT, language);
-  if (!fs.existsSync(localeDir)) return [];
+export async function getAllContentPaths(language: Locale = "en"): Promise<Array<{ contentType: string; slug: string[] }>> {
+  const paths: Array<{ contentType: string; slug: string[] }> = [];
 
-  const entries = fs.readdirSync(localeDir, { withFileTypes: true });
-  const contentTypeDirs = entries.filter((entry) => entry.isDirectory());
-
-  const paths = contentTypeDirs.flatMap((entry) => {
-    const segments = getSlugsFromDirectory(path.join(localeDir, entry.name));
-    return segments.map((slug) => ({ contentType: entry.name, slug }));
-  });
+  for (const type of CONTENT_TYPES) {
+    const typeDir = path.join(CONTENT_ROOT, language, type);
+    const slugs = getSlugsFromDirectory(typeDir);
+    for (const slug of slugs) {
+      paths.push({ contentType: type, slug });
+    }
+  }
 
   return paths;
 }

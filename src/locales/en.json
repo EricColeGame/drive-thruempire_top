@@ -6,7 +6,16 @@
     "description": "Explore the Drive-Thru Empire Wiki for Roblox codes, cars, upgrades, earning tips, beginner guides, gameplay mechanics, and the latest game information.",
     "legalNotice": "Non-official fan wiki. Made by players, for players."
   },
-  "nav": {},
+  "nav": {
+    "codes": "Codes",
+    "guide": "Guide",
+    "progression": "Progression",
+    "mechanics": "Mechanics",
+    "tips": "Tips",
+    "updates": "Updates",
+    "discord": "Discord",
+    "community": "Community"
+  },
   "home": {
     "meta": {
       "title": "Drive-Thru Empire Wiki — Codes, Recipes, Upgrades & Guides",
@@ -456,5 +465,37 @@
     "buildGuide": "Earning Guide",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service"
+  },
+  "codes": {
+    "overviewTitle": "Drive-Thru Empire Codes",
+    "overviewDescription": "Latest active promo codes, cash boosts, exclusive rewards, and step-by-step redemption guides for Drive-Thru Empire."
+  },
+  "guide": {
+    "overviewTitle": "Drive-Thru Empire Getting Started Guides",
+    "overviewDescription": "Complete walkthroughs, beginner tutorials, order station management, and foundational tycoon strategies for Drive-Thru Empire."
+  },
+  "progression": {
+    "overviewTitle": "Drive-Thru Empire Progression & Upgrades",
+    "overviewDescription": "Optimal fast-cash roadmap, kitchen appliance tier progression, rebirth perks, and billionaire milestones in Drive-Thru Empire."
+  },
+  "mechanics": {
+    "overviewTitle": "Drive-Thru Empire Game Mechanics",
+    "overviewDescription": "In-depth breakdown of restaurant logistics, customer queuing physics, prep line automation, and supercar garage delivery systems."
+  },
+  "tips": {
+    "overviewTitle": "Drive-Thru Empire Tips & Strategies",
+    "overviewDescription": "Pro efficiency tips, layout design advice, cash-flow optimization tricks, and top secret secrets for Drive-Thru Empire tycoons."
+  },
+  "updates": {
+    "overviewTitle": "Drive-Thru Empire Updates & Patch Notes",
+    "overviewDescription": "Comprehensive changelogs, upcoming feature roadmaps, seasonal event details, and balance adjustments for Drive-Thru Empire."
+  },
+  "discord": {
+    "overviewTitle": "Drive-Thru Empire Discord & Community Hub",
+    "overviewDescription": "Official Discord server links, developer announcements, code release alerts, and community channels for Drive-Thru Empire."
+  },
+  "community": {
+    "overviewTitle": "Drive-Thru Empire Community & Socials",
+    "overviewDescription": "Reddit discussions, Roblox group hubs, player fan art, trading discussions, and community forums for Drive-Thru Empire."
   }
 }
